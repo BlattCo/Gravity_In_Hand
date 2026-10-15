@@ -22,3 +22,8 @@ All micro-changes to the `Gravity_In_Hand` repository are logged in chronologica
 - **Action:** Implemented the USB Thumbdrive Partition Inspector & `exFAT` Provisioning Engine (`src/__init__.py`, `src/usb_provisioner.py`, `tests/test_usb_provisioner.py`).
 - **Verification:** `python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`6 passed in 0.03s`).
 
+## [MICRO-005] — 2026-10-15 (`T-003`)
+- **Action:** Implemented the ARM64 Termux + `proot-distro` Ubuntu Antigravity & Android Modding Bootstrap Generator (`src/arm64_bootstrap.py`, `tests/test_arm64_bootstrap.py`).
+- **Verification:** `python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`10 passed in 0.06s`, `bash -n` verified on all generated `.sh` scripts).
+
+
