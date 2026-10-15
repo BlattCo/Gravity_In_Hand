@@ -30,5 +30,10 @@ All micro-changes to the `Gravity_In_Hand` repository are logged in chronologica
 - **Action:** Implemented the Shizuku (`rish`) & Local Wireless ADB Self-Modding Bridge (`src/shizuku_adb_bridge.py`, `tests/test_shizuku_adb_bridge.py`).
 - **Verification:** `python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`15 passed in 0.13s`).
 
+## [MICRO-007] — 2026-10-15 (`T-005`)
+- **Action:** Implemented the BlattCo Gravity In Hand Dual-Mode GUI & Terminal Deck + 60-second Auto-Shutdown Heartbeat Reaper (`src/gravity_gui.py`, `run.sh` with `GRAV_DECK_${TIMESTAMP}.py` symlink naming, `tests/test_gravity_gui.py`).
+- **Verification:** `chmod +x run.sh && bash -n run.sh && python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`19 passed in 0.18s`).
+
+
 
 
