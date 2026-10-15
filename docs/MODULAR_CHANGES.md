@@ -34,6 +34,11 @@ All micro-changes to the `Gravity_In_Hand` repository are logged in chronologica
 - **Action:** Implemented the BlattCo Gravity In Hand Dual-Mode GUI & Terminal Deck + 60-second Auto-Shutdown Heartbeat Reaper (`src/gravity_gui.py`, `run.sh` with `GRAV_DECK_${TIMESTAMP}.py` symlink naming, `tests/test_gravity_gui.py`).
 - **Verification:** `chmod +x run.sh && bash -n run.sh && python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`19 passed in 0.18s`).
 
+## [MICRO-008] — 2026-10-15 (`T-006`)
+- **Action:** Established GitHub Actions CI pipeline (`.github/workflows/ci.yml`) and end-to-end zero-stub, JSON state schema, and USB/ARM64 provisioning verification suite (`tests/test_ci_and_state_integrity.py`).
+- **Verification:** `python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`23 passed in 0.21s`).
+
+
 
 
 
