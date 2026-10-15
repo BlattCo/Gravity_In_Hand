@@ -17,3 +17,8 @@ All micro-changes to the `Gravity_In_Hand` repository are logged in chronologica
 
 ## [MICRO-003] — 2026-10-15 (`T-001`)
 - **Action:** Formatted the entire `AGENT.md` / `AGENTS.md` (and global `/home/blatt/.gemini/config/rules/AGENTS.md`) into clean, properly indented GitHub-Flavored Markdown hierarchy (`#` -> `##` -> `### 1..19`, indented numbered items `1.` / `2.` / `3.`, nested sub-bullets, and indented code blocks) while preserving 100% of every directive.
+
+## [MICRO-004] — 2026-10-15 (`T-002`)
+- **Action:** Implemented the USB Thumbdrive Partition Inspector & `exFAT` Provisioning Engine (`src/__init__.py`, `src/usb_provisioner.py`, `tests/test_usb_provisioner.py`).
+- **Verification:** `python3 -c 'import ast, pathlib; [ast.parse(p.read_text()) for p in pathlib.Path(".").rglob("*.py")]; print("AST_OK")' && pytest -v` (`6 passed in 0.03s`).
+
